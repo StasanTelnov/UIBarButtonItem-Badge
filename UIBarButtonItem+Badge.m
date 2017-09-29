@@ -51,7 +51,7 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 
 - (void)badgeAddToView {
     UIView *superview = nil;
-    CGFloat defaultOriginX = 0;
+    CGFloat defaultOriginX = 1;
     if (self.customView) {
         superview = self.customView;
         defaultOriginX = superview.frame.size.width - self.badge.frame.size.width/2;
@@ -64,13 +64,13 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
     
     
     // Default design initialization
-    self.badgeBGColor   = [UIColor colorWithRed:199.0f / 255.0f green:29.0f / 255.0f blue:62.0f / 255.0f alpha:1.0f];;
+    self.badgeBGColor   = [UIColor colorWithRed:199.0f / 255.0f green:29.0f / 255.0f blue:62.0f / 255.0f alpha:1.0f];
     self.badgeTextColor = [UIColor whiteColor];
     self.badgeFont      = [UIFont fontWithName:@"PTSerif-Bold" size:14.0f];
     self.badgePadding   = 2;
     self.badgeMinSize   = 2;
     self.badgeOriginX   = defaultOriginX;
-    self.badgeOriginY   = -4;
+    self.badgeOriginY   = -2;
     self.shouldHideBadgeAtZero = YES;
     self.shouldAnimateBadge = NO;
 }
